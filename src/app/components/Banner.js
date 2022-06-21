@@ -24,40 +24,35 @@ function Banner() {
     fetchMovie();
   }, []);
 
-  console.log(movie);
+  console.log(movie, "movies");
 
   function truncate(string, n) {
     return string?.length > n ? string.substring(0, n - 1) + "..." : string;
   }
+
+  const baseURL = "https://image.tmdb.org/t/p/original/";
   return (
     <header
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url("https://i.imgur.com/e1hLQ2m.png")`,
+        backgroundImage: `url(${baseURL}${movie?.backdrop_path})`,
         backgroundPosition: "center center",
       }}
     >
       <div className="banner__contents">
-        <h1 className="banner__title">Movie Name</h1>
+        <h1 className="banner__title">
+          {movie?.name || movie?.title || movie?.orginal_name}
+        </h1>
         <div className="banner__buttons">
           <button className="banner__button">Play</button>
           <button className="banner__button">My list</button>
         </div>
         <h1 className="banner__description">
           {truncate(
-            `this is a test descriptionthis is a test description
-        this is a test description
-        this is a test description
-        this is a test description
-        this is a test descriptionthis is a test description
-        this is a test description
-        this is a test description
-        this is a test description
-        this is a test descriptionthis is a test descriptionthis is a test description
-        this is a test descriptionthis is a test description
+            `${movie.overview}
  `,
-            150
+            180
           )}{" "}
         </h1>
       </div>
