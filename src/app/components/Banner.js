@@ -36,6 +36,7 @@ function Banner() {
       className="banner"
       style={{
         backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         backgroundImage: `url(${baseURL}${movie?.backdrop_path})`,
         backgroundPosition: "center center",
       }}
