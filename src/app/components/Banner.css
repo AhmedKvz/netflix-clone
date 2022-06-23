@@ -3,6 +3,7 @@
   height: 448px;
   color: white;
   object-fit: contain;
+  overflow-x: hidden;
 }
 
 .banner__contents {
@@ -55,4 +56,10 @@
   color: #000;
   background-color: #e6e6e6;
   transition: all 0.2s;
+}
+@media screen and (max-width: 375px) {
+  .banner__description {
+    font-size: 0.7rem;
+    width: 21rem;
+  }
 }

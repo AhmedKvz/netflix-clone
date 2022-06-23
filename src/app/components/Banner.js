@@ -53,7 +53,7 @@ function Banner() {
           {truncate(
             `${movie.overview}
  `,
-            180
+            150
           )}{" "}
         </h1>
       </div>

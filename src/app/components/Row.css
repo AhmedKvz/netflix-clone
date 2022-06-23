@@ -29,3 +29,8 @@
   max-height: 250px;
   object-fit: contain;
 }
+
+.row__poster_large:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
